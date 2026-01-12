@@ -61,21 +61,22 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 relative">
+    <section id="projects" className="py-20 relative animate-in fade-in-50 duration-1000">
       <div className="container mx-auto px-6">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 animate-in slide-in-from-bottom-4 duration-1000 delay-200">
+            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent hover:animate-pulse transition-all duration-300">
               Featured Projects
             </span>
           </h2>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
-              <div
-                key={project.title}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700/50 hover:border-blue-500/50 transition-all duration-500 hover:transform hover:scale-105 overflow-hidden group relative"
-              >
+           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+             {projects.map((project, index) => (
+               <div
+                 key={project.title}
+                 className={`bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700/50 hover:border-blue-500/50 transition-all duration-500 hover:transform hover:scale-105 overflow-hidden group relative animate-in slide-in-from-bottom-8 duration-1000`}
+                 style={{ animationDelay: `${index * 200}ms` }}
+               >
                 {/* Animated gradient border on hover */}
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
                 
